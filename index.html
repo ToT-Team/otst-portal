@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTST入口網站</title>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="fontawesome-free-5.13.0-web/css/all.min.css" />
+    <style type="text/css">
+        html, body {
+            scroll-behavior: smooth;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            color: #FFFFFF;
+            font-family: 'CustomFont';
+        }
+
+        @font-face {
+            font-family: "CustomFont";
+            src: url(font/Aller.ttf) format("truetype");
+            unicode-range: U+00-024F;
+        }
+
+        @font-face {
+            font-family: "CustomFont";
+            src: url(font/NotoSansHant-Bold.otf) format("opentype");
+            unicode-range: U+4E00-9FFF;
+        }
+
+
+        .container-fluid{
+            max-width: 1024px;
+        }
+
+        .o1 {
+            background-image: url("img/o1.png");
+        }
+
+        .o2 {
+            background-image: url("img/o2.png");
+        }
+
+        .o3 {
+            background-image: url("img/o3.png");
+        }
+
+        .o4 {
+            background-image: url("img/o4.png");
+        }
+
+        .o5 {
+            background-image: url("img/o5.png");
+        }
+
+        .main-banner{
+            overflow-y: hidden;
+            position: relative;
+            height: 64vh;
+        }
+
+        .image-banner{
+            position: absolute;
+            
+            padding: 0;
+            background-color: black;
+            background-position: center center;
+            background-repeat-x: no-repeat;
+            background-size: cover;
+            border-radius: 4px;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: 0.4s;
+        }
+
+        .image-content{
+            width: 100%; 
+            position: absolute; 
+            bottom: 0; 
+            padding: 8px; 
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+        }
+
+
+        .image-btn{
+            padding: 0;
+            background-color: black;
+            background-position: center center;
+            background-repeat-x: no-repeat;
+            background-size: cover;
+            border-radius: 4px;
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+
+            transition: 0.2s;
+        }
+
+
+        .image-btn:hover{
+            opacity: 0.9;
+        }
+
+
+        .btn-list{
+            display: flex;
+            width: 100%;
+            min-width: 800px;
+            height: 20vh;
+        }
+
+        .btn-list .col{
+            padding: 12px 6px;
+        }
+
+
+
+    /* width */
+        .btn-scroll::-webkit-scrollbar {
+          height: 8px;
+        }
+
+        /* Track */
+        .btn-scroll::-webkit-scrollbar-track {
+          box-shadow: inset 0 0 3px grey; 
+          border-radius: 10px;
+        }
+
+        /* Handle */
+        .btn-scroll::-webkit-scrollbar-thumb {
+          background: #eee; 
+          border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        .btn-scroll::-webkit-scrollbar-thumb:hover {
+          background: #eee; 
+        }
+
+        .btn{
+            margin: 4px;
+        }
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            visitLog();
+            setBanner(0);
+            slideEvent();
+        });
+
+
+
+        function slideEvent(){
+
+            const slider = document.querySelector('.btn-scroll');
+             let isDown = false;
+             let startX;
+             let scrollLeft;
+
+            
+             slider.addEventListener('mousedown', (e) => {
+                 isDown = true;
+                 slider.classList.add('active');
+                 startX = e.pageX - slider.offsetLeft;
+                 scrollLeft = slider.scrollLeft;
+             });
+             slider.addEventListener('mouseleave', () => {
+                 isDown = false;
+                 slider.classList.remove('active');
+             });
+             slider.addEventListener('mouseup', () => {
+                 isDown = false;
+                 slider.classList.remove('active');
+             });
+             slider.addEventListener('mousemove', (e) => {
+                 if (!isDown) return;
+                 e.preventDefault();
+                 const x = e.pageX - slider.offsetLeft;
+                 const walk = (x - startX); //scroll-fast
+                 slider.scrollLeft = scrollLeft - walk;
+                 console.log(walk);
+             });
+        }
+
+        function setBanner(num){
+            $(".image-banner").css("opacity", "0");
+            $(".image-banner").css("z-index", "0");
+            $(".image-banner").eq(num).css("opacity", "1");
+            $(".image-banner").eq(num).css("z-index", "1");
+        }
+
+        function visitLog() {
+            var ip_address = "";
+            $.getJSON('https://httpbin.org/ip', function (data) {
+                ip_address = data['origin'];
+                if (ip_address.indexOf(',') != -1) {
+                    ip_address = ip_address.split(',')[0];
+                }
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "Program/r_visit.aspx",
+                    data: {
+                        "ip_address": ip_address
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    success: function (obj) {
+                        //console.log(obj);
+
+                    },
+                    error: function (xhr, status, error) {
+
+                    },
+                    async: false,
+                    cache: false
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="container" style=" padding: 24px;">
+        <div class="row main-banner">
+            <div class="image-banner o5">
+                <div class="image-content">
+                    <a class="btn btn-primary" href="//otst.tw/5">WebSite</a>
+                    <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/1088789" target="_blank">
+                        osu! forum
+                        <sup><i class="fas fa-external-link-alt"></i></a></sup>
+                    </a>
+                </div>
+            </div>
+            <div class="image-banner o4">
+                <div class="image-content">
+                    <a class="btn btn-primary" href="//otst.tw/4">WebSite</a>
+                    <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/908184" target="_blank">
+                        osu! forum
+                        <sup><i class="fas fa-external-link-alt"></i></a></sup>
+                    </a>
+                </div>
+            </div>
+            <div class="image-banner o3">
+                <div class="image-content">
+                    <a class="btn btn-primary" href="//otst.tw/3">WebSite</a>
+                    <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/742667" target="_blank">
+                        osu! forum
+                        <sup><i class="fas fa-external-link-alt"></i></a></sup>
+                    </a>
+                </div>
+            </div>
+            <div class="image-banner o2">
+                <div class="image-content">
+                    <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/591935" target="_blank">
+                        osu! forum
+                        <sup><i class="fas fa-external-link-alt"></i></a></sup>
+                    </a>
+                </div>
+            </div>
+            <div class="image-banner o1">
+                <div class="image-content">
+                    <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/417190" target="_blank">
+                        osu! forum
+                        <sup><i class="fas fa-external-link-alt"></i></a></sup>
+                </div>
+            </div>
+        </div>
+
+        <div class="row btn-scroll" style="overflow-x: auto;">
+            <div class="btn-list">
+                <div class="col"><div class="image-btn o5" onclick="setBanner(0)"></div></div>
+                <div class="col"><div class="image-btn o4" onclick="setBanner(1)"></div></div>
+                <div class="col"><div class="image-btn o3" onclick="setBanner(2)"></div></div>
+                <div class="col"><div class="image-btn o2" onclick="setBanner(3)"></div></div>
+                <div class="col"><div class="image-btn o1" onclick="setBanner(4)"></div></div>
+            </div>
+        </div>
+	</div>
+</div>
+</body>
+</html>
