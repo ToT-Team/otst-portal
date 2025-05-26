@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>OTST入口網站</title>
+    <script src="js/jquery-3.4.0.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+    <style type="text/css">
+        html, body {
+            scroll-behavior: smooth;
+            background-color: black;
+            height: 100%;
+            width: 100%;
+            color: #FFFFFF;
+            font-family: 'CustomFont';
+        }
+
+
+        @font-face {
+            font-family: "CustomFont";
+            src: url(font/Aller.ttf) format("truetype");
+            unicode-range: U+00-024F;
+        }
+
+        @font-face {
+            font-family: "CustomFont";
+            src: url(font/NotoSansHant-Bold.otf) format("opentype");
+            unicode-range: U+4E00-9FFF;
+        }
+
+
+        .title {
+            margin: 18px 0;
+            padding: 0;
+            background-color: black;
+            background-position: center center;
+            background-repeat-x: no-repeat;
+            background-size: cover;
+            border-radius: 4px;
+            height: 320px;
+        }
+
+            .title:hover > .transbox {
+                opacity: 1;
+            }
+
+        .o1 {
+            background-image: url("img/o1.png");
+        }
+
+        .o2 {
+            background-image: url("img/o2.png");
+        }
+
+        .o3 {
+            background-image: url("img/o3.png");
+        }
+
+        .o4 {
+            background-image: url("img/o4.png");
+        }
+
+        .transbox {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 144px 0;
+            transition: 0.2s;
+            opacity: 0;
+        }
+
+
+        .btn-osu {
+            color: #fff;
+            background-color: #ff66cc;
+            border-color: #ff66cc;
+        }
+
+            .btn-osu:hover {
+                color: #fff;
+                background-color: #ff33bb;
+                border-color: #ff1ab3;
+            }
+    </style>
+
+
+    <script>
+        $(document).ready(function () {
+            visitLog();
+        });
+
+
+        function visitLog() {
+            var ip_address = "";
+            $.getJSON('https://httpbin.org/ip', function (data) {
+                ip_address = data['origin'];
+                if (ip_address.indexOf(',') != -1) {
+                    ip_address = ip_address.split(',')[0];
+                }
+
+                $.ajax({
+                    type: "GET",
+                    dataType: "json",
+                    url: "Program/r_visit.aspx",
+                    data: {
+                        "ip_address": ip_address
+                    },
+                    contentType: "application/json; charset=utf-8",
+                    success: function (obj) {
+                        //console.log(obj);
+
+                    },
+                    error: function (xhr, status, error) {
+
+                    },
+                    async: false,
+                    cache: false
+                });
+            });
+        }
+    </script>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="container" style=" padding: 24px;">
+		<div class="row">
+			<div class="col-lg-6 col-md-12">
+				<div class="col title o4">
+                    <div class="transbox">
+                        <a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/908184" target="_blank">osu! forum</a>
+                        <a class="btn btn-primary" href="4" target="_blank">Website</a>
+                    </div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-12">
+				<div class="col title o3">
+					<div class="transbox">
+						<a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/742667" target="_blank">osu! forum</a>
+						<a class="btn btn-primary" href="3" target="_blank">Website</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-12">
+				<div class="col title o2">
+					<div class="transbox col-sm-12">
+						<a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/591935" target="_blank">osu! forum</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-6 col-md-12">
+				<div class="col title o1">
+					<div class="transbox col-sm-12">
+						<a class="btn btn-osu" href="https://osu.ppy.sh/community/forums/topics/417190" target="_blank">osu! forum</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
