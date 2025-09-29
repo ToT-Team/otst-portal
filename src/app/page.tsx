@@ -1,38 +1,34 @@
 'use client'
-import { AnimatePresence, motion } from "framer-motion";
-import styles from './page.module.css'
-
-import Opening from "./opening/page";
-import Index from "./home/page";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+import styles from "./page.module.css";
+import Intro from "./intro/page";
+import Main from "./main/page";
 
 export default function Home() {
-    const [stage, setStage] = useState(0);
-    return (
-        <main className={styles.main}>
-            <AnimatePresence mode="wait">
-                {stage === 0 &&
-                    <motion.div
-                        key={'opening'}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.5 }}>
-                        <Opening />
-                        <button className={styles.skipButton} onClick={() => setStage(1)}>Skip</button>
-                    </motion.div>
+  const [showIntro, setShowIntro] = useState(true);
 
-                }
-                {stage === 1 &&
-                    <motion.div 
-                        key={'index'}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        transition={{ duration: 0.5 }}>
-                        <Index />
-                    </motion.div>
-                }
+  const introRef = useRef(null);
+  const mainRef = useRef(null);
+  const nodeRef = showIntro ? introRef : mainRef;
+  const handleSkip = () => {
+    // if (screen !== 'intro') return;
+    setShowIntro(!showIntro);
+  }
 
-
-            </AnimatePresence>
-        </main>
-    );
+  return <div className="container">
+      <SwitchTransition>
+        <CSSTransition
+          key={showIntro ? "intro" : "main"}
+          timeout={500}
+          nodeRef={nodeRef}
+          classNames="fade"
+        >
+          <div ref={nodeRef} >
+          {showIntro ? <Intro /> :  <Main />}
+          </div>
+        </CSSTransition>
+      </SwitchTransition>
+      <button className={styles.skip} onClick={() => handleSkip()}>Skip</button>
+    </div>
 }
