@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Dela_Gothic_One, Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Orbitron } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,16 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "OTST Entry",
-  description: "osu! Taiwan Standard Tournament Series Website",
-};
-
-const delaGothicOne = Dela_Gothic_One({
-  // variable: "--font-geist-mono",
-  weight: '400',
-  subsets: ['latin']
+const orbitron = Orbitron({
+  variable: "--font-orbitron",
+  subsets: ["latin"],
+  weight: ["400", "700", "900"],
 });
+
+export const metadata: Metadata = {
+  title: "OTST | Esports & Tournament Portal",
+  description: "Offline To Online Synchronized Tournaments. Discover elite gaming schedules, standings, and historical records.",
+};
 
 export default function RootLayout({
   children,
@@ -29,10 +29,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${orbitron.variable} h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
 }

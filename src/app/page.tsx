@@ -1,34 +1,24 @@
-'use client'
-import { useRef, useState } from "react";
-import { CSSTransition, SwitchTransition } from "react-transition-group";
-import styles from "./page.module.css";
-import Intro from "./intro/page";
-import Main from "./main/page";
+import HeroSection from "@/components/HeroSection";
+import HorizontalScrollSection from "@/components/HorizontalScrollSection";
+import ScheduleSection from "@/components/ScheduleSection";
+import Footer from "@/components/Footer";
 
 export default function Home() {
-  const [showIntro, setShowIntro] = useState(true);
+  return (
+    <div className="relative min-h-screen bg-cyber-bg-darker text-white">
+      <main className="w-full flex flex-col">
+        {/* Section 1: Hero Centered Logo */}
+        <HeroSection />
 
-  const introRef = useRef(null);
-  const mainRef = useRef(null);
-  const nodeRef = showIntro ? introRef : mainRef;
-  const handleSkip = () => {
-    // if (screen !== 'intro') return;
-    setShowIntro(!showIntro);
-  }
+        {/* Section 2: Vertical to Horizontal Past Tournaments */}
+        <HorizontalScrollSection />
 
-  return <div className="container">
-      <SwitchTransition>
-        <CSSTransition
-          key={showIntro ? "intro" : "main"}
-          timeout={500}
-          nodeRef={nodeRef}
-          classNames="fade"
-        >
-          <div ref={nodeRef} >
-          {showIntro ? <Intro /> :  <Main />}
-          </div>
-        </CSSTransition>
-      </SwitchTransition>
-      <button className={styles.skip} onClick={() => handleSkip()}>Skip</button>
+        {/* Section 3: Interactive Tournament Schedule and Leaderboard */}
+        <ScheduleSection />
+      </main>
+
+      {/* Footer */}
+      <Footer />
     </div>
+  );
 }
