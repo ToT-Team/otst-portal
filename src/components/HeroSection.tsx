@@ -28,15 +28,8 @@ export default function HeroSection() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl">
         {/* Large Logo */}
-        <h1 className="relative font-orbitron font-black text-[5rem] sm:text-[8rem] md:text-[11rem] leading-none tracking-tighter uppercase select-none">
-          {/* Backdrop Glow */}
-          <span className="absolute inset-0 text-neon-blue/40 blur-xl select-none font-orbitron font-black">
-            OTST
-          </span>
-          {/* Main Logo Text with Gradient */}
-          <span className="relative bg-clip-text text-transparent bg-gradient-to-r from-neon-mint via-white to-neon-blue">
-            OTST
-          </span>
+        <h1 className="font-oxanium font-extrabold text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.15em] uppercase select-none text-neon-mint mb-6">
+          OTST
         </h1>
 
         {/* Tagline / Subtitle */}

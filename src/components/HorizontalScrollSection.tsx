@@ -20,44 +20,124 @@ interface EventData {
 const PAST_EVENTS: EventData[] = [
   {
     id: "01",
-    season: "SEASON I",
-    title: "OTST 2024 WINTER CUP",
-    date: "December 15 - 22, 2024",
-    winner: "Alpha Sentinels",
-    prize: "$50,000 USD",
-    viewers: "24,000 Peak",
-    description: "The inaugural winter cup that started it all. 32 professional squads clashed in a double-elimination format over 7 days of high-intensity competitive play.",
-    color: "from-neon-blue/15 via-neon-mint/5 to-transparent",
-    glowColor: "shadow-neon-mint/20",
-    highlight: "Double-Elimination Bracket"
+    season: "SEASON I - 2016",
+    title: "OTST 2016 GENESIS CUP",
+    date: "November 10 - 15, 2016",
+    winner: "Taiwan OldSchool",
+    prize: "$5,000 TWD",
+    viewers: "1,500 Peak",
+    description: "The very first Taiwanese Standard Tournament. A grassroots local championship that set the foundation for osu! competitive community leagues in Taiwan.",
+    color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-mint/10",
+    highlight: "Community Initiation"
   },
   {
     id: "02",
-    season: "SEASON II",
-    title: "OTST 2025 SUMMER INVITATIONAL",
-    date: "July 12 - 18, 2025",
-    winner: "Rex Dominance",
-    prize: "$80,000 USD",
-    viewers: "65,000 Peak",
-    description: "A mid-year showstopper inviting top regional champions. The tournament featured the first-ever physical LAN final stage, setting new production standards.",
-    color: "from-neon-blue/20 via-cyber-bg-light/10 to-transparent",
-    glowColor: "shadow-neon-blue/20",
-    highlight: "Offline LAN Arena Stage"
+    season: "SEASON II - 2017",
+    title: "OTST 2017 CLASH OF HEROES",
+    date: "August 12 - 18, 2017",
+    winner: "Eclipse Esports",
+    prize: "$15,000 TWD",
+    viewers: "3,200 Peak",
+    description: "Expanding the player bracket and adopting double-elimination rules. This season witnessed the legendary finals that cemented regional rivalry.",
+    color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-blue/10",
+    highlight: "Double-Elimination System"
   },
   {
     id: "03",
-    season: "SEASON III",
-    title: "OTST 2026 SPRING CHAMPIONSHIP",
-    date: "April 05 - 12, 2026",
-    winner: "Vortex Esports",
-    prize: "$120,000 USD",
-    viewers: "110,000 Peak",
-    description: "Our largest tournament. Blending online open qualifiers with a live crowd stadium finale, witnessing record-breaking match times and legendary comebacks.",
-    color: "from-neon-gold/15 via-cyber-bg-light/10 to-transparent",
-    glowColor: "shadow-neon-gold/20",
-    highlight: "Stadium Main Stage Event"
+    season: "SEASON III - 2018",
+    title: "OTST 2018 EVOLUTION",
+    date: "October 05 - 12, 2018",
+    winner: "Apex Predators",
+    prize: "$30,000 TWD",
+    viewers: "5,800 Peak",
+    description: "First tournament introducing custom pool designs, allowing players to show mechanical mastery across complex map variations.",
+    color: "from-neon-gold/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-gold/10",
+    highlight: "Custom Mappool Design"
+  },
+  {
+    id: "04",
+    season: "SEASON IV - 2019",
+    title: "OTST 2019 NEXUS INVITE",
+    date: "December 08 - 15, 2019",
+    winner: "Nova Syndicate",
+    prize: "$50,000 TWD",
+    viewers: "8,500 Peak",
+    description: "Broadcast capabilities upgraded. An invite-only system bringing together the top 16 local talents for a high-speed showcase event.",
+    color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-mint/10",
+    highlight: "First Live Broadcast"
+  },
+  {
+    id: "05",
+    season: "SEASON V - 2020",
+    title: "OTST 2020 VIRTUAL ARENA",
+    date: "September 14 - 20, 2020",
+    winner: "Frostbite Gaming",
+    prize: "$70,000 TWD",
+    viewers: "14,000 Peak",
+    description: "Adapted to global remote conditions with fully optimized streaming production, breaking record player signups and online viewership.",
+    color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-blue/10",
+    highlight: "Fully Virtual Production"
+  },
+  {
+    id: "06",
+    season: "SEASON VI - 2021",
+    title: "OTST 2021 REBIRTH",
+    date: "July 22 - 28, 2021",
+    winner: "Ignis Esports",
+    prize: "$100,000 TWD",
+    viewers: "22,000 Peak",
+    description: "Rebuilding the core structure. Introducing regional groups and advanced statistics dashboard for player performance tracking.",
+    color: "from-neon-gold/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-gold/10",
+    highlight: "Advanced Stats Hub"
+  },
+  {
+    id: "07",
+    season: "SEASON VII - 2022",
+    title: "OTST 2022 ASCENDANCY",
+    date: "November 05 - 12, 2022",
+    winner: "Vortex Masters",
+    prize: "$150,000 TWD",
+    viewers: "38,000 Peak",
+    description: "Introduction of physical hybrid LAN setups for regional semi-final stages, increasing local engagement and community gatherings.",
+    color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-mint/10",
+    highlight: "Hybrid LAN Stages"
+  },
+  {
+    id: "08",
+    season: "SEASON VIII - 2023",
+    title: "OTST 2023 ELITE INVITATIONAL",
+    date: "August 18 - 25, 2023",
+    winner: "Rex Dominance",
+    prize: "$200,000 TWD",
+    viewers: "70,000 Peak",
+    description: "The transition to a stadium LAN finals in Taipei. Bringing together elite local players to perform on the main stage before a live audience.",
+    color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-blue/10",
+    highlight: "Live Stage LAN Finals"
+  },
+  {
+    id: "09",
+    season: "SEASON IX - 2024",
+    title: "OTST 2024 WINTER CUP",
+    date: "December 15 - 22, 2024",
+    winner: "Alpha Sentinels",
+    prize: "$300,000 TWD",
+    viewers: "120,000 Peak",
+    description: "Our largest cup to date. Features a double-elimination hybrid stage, custom esports mapping, and massive community contributions.",
+    color: "from-neon-gold/15 via-cyber-bg-light/5 to-transparent",
+    glowColor: "shadow-neon-gold/10",
+    highlight: "Record-Breaking Season"
   }
 ];
+
+const YEARS = [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024];
 
 export default function HorizontalScrollSection() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -85,44 +165,43 @@ export default function HorizontalScrollSection() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Jump to specific slide (year index)
+  const handleYearClick = (index: number) => {
+    if (!containerRef.current) return;
+
+    const rect = containerRef.current.getBoundingClientRect();
+    const containerTop = window.scrollY + rect.top;
+    const scrollableHeight = rect.height - window.innerHeight;
+
+    // Calculate vertical scroll position corresponding to the year index
+    const targetScrollY = containerTop + (index / 8) * scrollableHeight;
+
+    window.scrollTo({
+      top: targetScrollY,
+      behavior: "smooth"
+    });
+  };
+
   return (
-    <div ref={containerRef} className="relative h-[300vh] w-full">
+    <div ref={containerRef} className="relative h-[900vh] w-full">
       {/* Sticky viewport container */}
       <div className="sticky top-0 h-screen w-full overflow-hidden bg-cyber-bg-dark flex flex-col justify-center">
         {/* Animated Cyber Background Grid */}
         <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none" />
 
-        {/* Section Header */}
-        <div className="absolute top-10 left-6 md:left-12 z-20 font-mono">
-          <span className="text-[10px] tracking-[0.4em] text-neon-mint uppercase block mb-1">
-            Historical Records
-          </span>
-          <h2 className="text-xl md:text-3xl font-extrabold tracking-wider uppercase text-white flex items-center gap-3">
-            <Target className="w-5 h-5 text-neon-mint animate-pulse" />
-            Past Tournaments
-          </h2>
-        </div>
 
-        {/* Slide Counter */}
-        <div className="absolute top-10 right-6 md:right-12 z-20 font-mono text-right">
-          <span className="text-[10px] tracking-[0.2em] text-gray-500 block">CURRENT RECORD</span>
-          <span className="text-xl md:text-2xl font-extrabold text-neon-mint">
-            {`0${Math.min(Math.floor(scrollProgress * 2.99) + 1, 3)}`}
-          </span>
-          <span className="text-gray-600 text-sm"> / 03</span>
-        </div>
 
         {/* Translating horizontal container */}
         <div 
-          className="flex h-full w-[300vw] transition-transform duration-75 ease-out"
-          style={{ transform: `translateX(-${scrollProgress * 200}vw)` }}
+          className="flex h-full w-[900vw] transition-transform duration-75 ease-out"
+          style={{ transform: `translateX(-${scrollProgress * 800}vw)` }}
         >
           {PAST_EVENTS.map((event, index) => {
             // Calculate scale & opacity for each slide based on scroll state
-            const targetPos = index * 0.5;
+            const targetPos = index * (1 / 8);
             const diff = Math.abs(scrollProgress - targetPos);
-            const slideOpacity = Math.max(1 - diff * 2.5, 0.4);
-            const slideScale = Math.max(1 - diff * 0.15, 0.9);
+            const slideOpacity = Math.max(1 - diff * 7.5, 0.4);
+            const slideScale = Math.max(1 - diff * 0.5, 0.9);
 
             return (
               <div 
@@ -204,16 +283,106 @@ export default function HorizontalScrollSection() {
           })}
         </div>
 
-        {/* Global Progress Scrollbar Indicator (bottom of section) */}
-        <div className="absolute bottom-10 left-6 right-6 md:left-12 md:right-12 z-20 flex items-center gap-4">
-          <span className="font-mono text-[9px] text-gray-500">START</span>
-          <div className="flex-1 h-[2px] bg-white/10 relative rounded-full overflow-hidden">
+        {/* Desktop Progress Timeline Indicator (bottom of section) */}
+        <div className="hidden md:flex absolute bottom-10 left-12 right-12 z-20 flex-col gap-5">
+          {/* Timeline Year Labels */}
+          <div className="relative w-full h-6 font-mono text-[10px] sm:text-xs">
+            {YEARS.map((year, index) => {
+              const targetPos = index * (1 / 8);
+              const isPastOrCurrent = scrollProgress >= targetPos - 0.02;
+              const isActive = Math.min(Math.max(Math.floor(scrollProgress * 8.99), 0), 8) === index;
+
+              return (
+                <button
+                  key={year}
+                  onClick={() => handleYearClick(index)}
+                  className="absolute top-0 -translate-x-1/2 flex flex-col items-center transition-all duration-300 cursor-pointer select-none group border-none bg-transparent outline-none"
+                  style={{ left: `${index * 12.5}%` }}
+                >
+                  <span 
+                    className={`transition-all duration-300 group-hover:text-neon-mint group-hover:scale-110 ${
+                      isActive 
+                        ? "text-neon-mint font-bold scale-110 text-glow-mint" 
+                        : isPastOrCurrent 
+                          ? "text-white" 
+                          : "text-gray-500"
+                    }`}
+                  >
+                    {year}
+                  </span>
+                  {/* Tick Dot */}
+                  <div 
+                    className={`w-1.5 h-1.5 rounded-full mt-2.5 transition-all duration-300 group-hover:bg-neon-mint group-hover:scale-125 ${
+                      isActive 
+                        ? "bg-neon-mint scale-125 shadow-[0_0_8px_rgba(0,245,160,0.8)]" 
+                        : isPastOrCurrent 
+                          ? "bg-white" 
+                          : "bg-gray-700"
+                    }`} 
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Progress Solid Bar Track */}
+          <div className="w-full h-[2px] bg-white/10 relative rounded-full overflow-hidden">
             <div 
-              className="absolute left-0 top-0 h-full bg-gradient-to-r from-neon-mint to-neon-blue shadow-[0_0_8px_rgba(0,245,160,0.6)]"
+              className="absolute left-0 top-0 h-full bg-neon-mint shadow-[0_0_8px_rgba(0,245,160,0.5)]"
               style={{ width: `${scrollProgress * 100}%` }}
             />
           </div>
-          <span className="font-mono text-[9px] text-gray-500">END</span>
+        </div>
+
+        {/* Mobile Vertical Timeline (right side of section) */}
+        <div className="flex md:hidden absolute right-3 top-1/2 -translate-y-1/2 z-20 flex-row items-center gap-2.5 h-[280px]">
+          {/* Timeline Year Labels */}
+          <div className="relative h-full w-10 font-mono text-[9px]">
+            {YEARS.map((year, index) => {
+              const targetPos = index * (1 / 8);
+              const isPastOrCurrent = scrollProgress >= targetPos - 0.02;
+              const isActive = Math.min(Math.max(Math.floor(scrollProgress * 8.99), 0), 8) === index;
+
+              return (
+                <button
+                  key={year}
+                  onClick={() => handleYearClick(index)}
+                  className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-1.5 transition-all duration-300 cursor-pointer select-none border-none bg-transparent outline-none text-right justify-end w-full group"
+                  style={{ top: `${index * 12.5}%` }}
+                >
+                  <span 
+                    className={`transition-all duration-300 group-hover:text-neon-mint group-hover:scale-110 ${
+                      isActive 
+                        ? "text-neon-mint font-bold scale-110 text-glow-mint" 
+                        : isPastOrCurrent 
+                          ? "text-white" 
+                          : "text-gray-500"
+                    }`}
+                  >
+                    {year}
+                  </span>
+                  {/* Tick Dot */}
+                  <div 
+                    className={`w-1 h-1 rounded-full transition-all duration-300 group-hover:bg-neon-mint group-hover:scale-125 ${
+                      isActive 
+                        ? "bg-neon-mint scale-125 shadow-[0_0_8px_rgba(0,245,160,0.8)]" 
+                        : isPastOrCurrent 
+                          ? "bg-white" 
+                          : "bg-gray-750"
+                    }`} 
+                  />
+                </button>
+              );
+            })}
+          </div>
+
+          {/* Progress Vertical Bar Track */}
+          <div className="w-[2px] h-full bg-white/10 relative rounded-full overflow-hidden">
+            <div 
+              className="absolute left-0 top-0 w-full bg-neon-mint shadow-[0_0_8px_rgba(0,245,160,0.5)]"
+              style={{ height: `${scrollProgress * 100}%` }}
+            />
+          </div>
         </div>
       </div>
     </div>

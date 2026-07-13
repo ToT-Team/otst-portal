@@ -1,6 +1,6 @@
 import HeroSection from "@/components/HeroSection";
 import HorizontalScrollSection from "@/components/HorizontalScrollSection";
-import ScheduleSection from "@/components/ScheduleSection";
+import SimpleBorderSection from "@/components/SimpleBorderSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -13,8 +13,8 @@ export default function Home() {
         {/* Section 2: Vertical to Horizontal Past Tournaments */}
         <HorizontalScrollSection />
 
-        {/* Section 3: Interactive Tournament Schedule and Leaderboard */}
-        <ScheduleSection />
+        {/* Section 3: Outlined Simple Text Rectangle */}
+        <SimpleBorderSection />
       </main>
 
       {/* Footer */}
