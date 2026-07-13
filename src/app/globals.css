@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oxanium:wght@400;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   --color-cyber-bg-darker: #02030c;
   --color-cyber-bg-dark: #060b24;
   --color-cyber-bg-light: #0d153b;
-  --color-neon-mint: #00d2ff; /* Swapped to Neon Cyan-Blue */
-  --color-neon-blue: #0066ff; /* Deep Electric Blue */
-  --color-neon-gold: #00a2ff; /* Accent Blue */
+  --color-neon-mint: #00d2ff;
+  --color-neon-blue: #0066ff;
+  --color-neon-gold: #00a2ff;
   --color-neon-coral: #00d2ff;
   
-  --font-oxanium: var(--font-oxanium);
+  --font-oxanium: 'Oxanium', sans-serif;
   
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-scanline: scanline 8s linear infinite;
