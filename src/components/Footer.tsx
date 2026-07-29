@@ -27,42 +27,43 @@ export default function Footer() {
         </div>
 
         {/* Center: Social Links */}
+        {/* Center: Social Links */}
         <div className="flex items-center gap-4">
-          {/* X / Twitter */}
+          {/* Github */}
           <a
             href="#"
-            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-mint hover:border-neon-mint/40 hover:shadow-[0_0_10px_rgba(0,245,160,0.2)] transition-all cursor-pointer"
+            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-mint hover:border-neon-mint/40 hover:shadow-[0_0_10px_rgba(0,163,255,0.2)] transition-all cursor-pointer"
+            aria-label="GitHub"
+          >
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
+            </svg>
+          </a>
+          {/* Twitter (X) */}
+          <a
+            href="#"
+            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-blue hover:border-neon-blue/40 hover:shadow-[0_0_10px_rgba(255,255,0,0.2)] transition-all cursor-pointer"
             aria-label="Twitter"
           >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
             </svg>
           </a>
-          {/* Discord */}
+          {/* YouTube */}
           <a
             href="#"
-            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-blue hover:border-neon-blue/40 hover:shadow-[0_0_10px_rgba(0,153,255,0.2)] transition-all cursor-pointer"
-            aria-label="Discord"
+            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-gold hover:border-neon-gold/40 hover:shadow-[0_0_10px_rgba(0,229,255,0.2)] transition-all cursor-pointer"
+            aria-label="YouTube"
           >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 127.14 96.36">
-              <path d="M107.7,8.07A105.15,105.15,0,0,0,77.26,0a77.19,77.19,0,0,0-3.3,6.83A96.67,96.67,0,0,0,53.22,6.83,77.19,77.19,0,0,0,49.88,0,105.15,105.15,0,0,0,19.44,8.07C3.66,31.58-1.86,54.65,1,77.53A105.73,105.73,0,0,0,32,96.36a77.7,77.7,0,0,0,6.63-10.85,68.43,68.43,0,0,1-10.5-5c1.9-1.4,3.74-2.92,5.5-4.5a75.41,75.41,0,0,0,67,0c1.76,1.58,3.6,3.1,5.5,4.5a68.43,68.43,0,0,1-10.5,5,77.7,77.7,0,0,0,6.63,10.85,105.73,105.73,0,0,0,31.06-18.83C129,54.65,122.83,31.58,107.7,8.07ZM42.45,65.69C36.18,65.69,31,60,31,53S36.18,40.36,42.45,40.36,53.92,46,53.92,53,48.72,65.69,42.45,65.69Zm42.24,0C78.41,65.69,73.24,60,73.24,53S78.41,40.36,84.69,40.36,96.16,46,96.16,53,91,65.69,84.69,65.69Z" />
+            <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path fillRule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clipRule="evenodd" />
             </svg>
           </a>
-          {/* Twitch */}
-          <a
-            href="#"
-            className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-neon-gold hover:border-neon-gold/40 hover:shadow-[0_0_10px_rgba(255,170,0,0.2)] transition-all cursor-pointer"
-            aria-label="Twitch"
-          >
-            <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
-              <path d="M11.571 4.714h1.715v5.143H11.57zm3.002 0H16.29v5.143h-1.717zm5.143-3.001v12.001l-4.716 4.715h-3.858l-2.142 2.143H6.858v-2.143H2.571V1.713zm-1.715 10.286V3.429H4.286v10.286h3.429v2.143l2.143-2.143h5.571z" />
-            </svg>
-          </a>
-          {/* GitHub */}
+          {/* Email */}
           <a
             href="#"
             className="w-10 h-10 rounded border border-white/10 bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:border-white/40 hover:shadow-[0_0_10px_rgba(255,255,255,0.2)] transition-all cursor-pointer"
-            aria-label="GitHub"
+            aria-label="Email Us"
           >
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
               <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />

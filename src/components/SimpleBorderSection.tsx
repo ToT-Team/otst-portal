@@ -9,7 +9,7 @@ export default function SimpleBorderSection() {
       <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none" />
 
       {/* Outlined Tech Rectangle */}
-      <div className="relative max-w-xl w-full p-10 md:p-14 border border-neon-blue/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,210,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-neon-mint/50 transition-all duration-500">
+      <div className="relative max-w-xl w-full p-10 md:p-14 border border-neon-blue/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,163,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-neon-mint/50 transition-all duration-500">
         {/* Subtle glowing tech corners on the rectangle */}
         <div className="absolute -top-[1px] -left-[1px] w-4 h-4 border-t border-l border-neon-mint/60" />
         <div className="absolute -top-[1px] -right-[1px] w-4 h-4 border-t border-r border-neon-mint/60" />

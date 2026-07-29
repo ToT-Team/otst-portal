@@ -2,13 +2,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-cyber-bg-darker: #02030c;
-  --color-cyber-bg-dark: #060b24;
-  --color-cyber-bg-light: #0d153b;
-  --color-neon-mint: #00d2ff;
-  --color-neon-blue: #0066ff;
-  --color-neon-gold: #00a2ff;
-  --color-neon-coral: #00d2ff;
+  /* Vibrant Deep Blue Backgrounds */
+  --color-cyber-bg-darker: #172554; /* Blue 950 */
+  --color-cyber-bg-dark: #1e3a8a; /* Blue 900 */
+  --color-cyber-bg-light: #1d4ed8; /* Blue 700 */
+  
+  /* Sports Accents */
+  --color-neon-mint: #00a3ff; /* Bright Blue (Primary) */
+  --color-neon-blue: #ffff00; /* Volt Yellow (Secondary) */
+  --color-neon-gold: #00e5ff; /* Cyan */
+  --color-neon-coral: #ff00ff; /* Magenta */
   
   --font-oxanium: 'Oxanium', sans-serif;
   
@@ -28,15 +31,15 @@
 
 @keyframes cyber-glow {
   0% {
-    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5), 0 0 20px rgba(0, 210, 255, 0.3);
+    text-shadow: 0 0 10px rgba(0, 163, 255, 0.5), 0 0 20px rgba(0, 163, 255, 0.3);
   }
   100% {
-    text-shadow: 0 0 15px rgba(0, 102, 255, 0.6), 0 0 30px rgba(0, 102, 255, 0.4);
+    text-shadow: 0 0 15px rgba(255, 255, 0, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
   }
 }
 
 :root {
-  --background: #02030c;
+  --background: #0f172a; /* Deep Slate Navy Base */
   --foreground: #f8fafc;
 }
 
@@ -47,34 +50,34 @@ body {
   overflow-x: hidden;
 }
 
-/* Custom Utilities for Tech/Esports Vibe */
+/* Custom Utilities for Sports Vibe */
 .bg-grid-cyber {
   background-size: 50px 50px;
   background-image: 
-    linear-gradient(to right, rgba(0, 210, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+    linear-gradient(to right, rgba(0, 163, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 163, 255, 0.05) 1px, transparent 1px);
 }
 
 .text-glow-mint {
-  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6), 0 0 20px rgba(0, 210, 255, 0.3);
+  text-shadow: 0 0 8px rgba(0, 163, 255, 0.6), 0 0 20px rgba(0, 163, 255, 0.3);
 }
 
 .text-glow-blue {
-  text-shadow: 0 0 8px rgba(0, 102, 255, 0.6), 0 0 20px rgba(0, 102, 255, 0.3);
+  text-shadow: 0 0 8px rgba(255, 255, 0, 0.6), 0 0 20px rgba(255, 255, 0, 0.3);
 }
 
 .text-glow-gold {
-  text-shadow: 0 0 8px rgba(0, 210, 255, 0.6), 0 0 20px rgba(0, 210, 255, 0.3);
+  text-shadow: 0 0 8px rgba(0, 229, 255, 0.6), 0 0 20px rgba(0, 229, 255, 0.3);
 }
 
 .border-glow-mint {
-  box-shadow: 0 0 10px rgba(0, 210, 255, 0.2), inset 0 0 10px rgba(0, 210, 255, 0.1);
-  border-color: rgba(0, 210, 255, 0.4);
+  box-shadow: 0 0 10px rgba(0, 163, 255, 0.2), inset 0 0 10px rgba(0, 163, 255, 0.1);
+  border-color: rgba(0, 163, 255, 0.4);
 }
 
 .border-glow-blue {
-  box-shadow: 0 0 10px rgba(0, 102, 255, 0.2), inset 0 0 10px rgba(0, 102, 255, 0.1);
-  border-color: rgba(0, 102, 255, 0.4);
+  box-shadow: 0 0 10px rgba(255, 255, 0, 0.2), inset 0 0 10px rgba(255, 255, 0, 0.1);
+  border-color: rgba(255, 255, 0, 0.4);
 }
 
 /* Hide Scrollbar for smooth horizontal container while keeping scroll functional */
@@ -91,13 +94,13 @@ body {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #02030c;
+  background: #0f172a;
 }
 ::-webkit-scrollbar-thumb {
-  background: #060b24;
+  background: #1e3a8a;
   border-radius: 4px;
-  border: 1px solid rgba(0, 210, 255, 0.2);
+  border: 1px solid rgba(0, 163, 255, 0.2);
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 210, 255, 0.4);
+  background: rgba(0, 163, 255, 0.4);
 }

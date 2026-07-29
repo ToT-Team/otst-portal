@@ -320,7 +320,7 @@ export default function HorizontalScrollSection() {
                     <span className="font-mono text-xs tracking-[0.4em] text-neon-mint uppercase mb-2">
                       {event.season}
                     </span>
-                    <div className="w-24 h-24 rounded-full border border-neon-mint/20 bg-cyber-bg-light/40 flex items-center justify-center mb-4 relative group shadow-[0_0_15px_rgba(0,245,160,0.1)]">
+                    <div className="w-24 h-24 rounded-full border border-neon-mint/20 bg-cyber-bg-light/40 flex items-center justify-center mb-4 relative group shadow-[0_0_15px_rgba(0,163,255,0.1)]">
                       <Trophy className="w-10 h-10 text-neon-mint animate-pulse" />
                     </div>
                     <span className="font-mono text-xs text-gray-400">WINNER</span>
@@ -428,7 +428,7 @@ export default function HorizontalScrollSection() {
               }}
             >
               {/* Visible pointer notch */}
-              <div className="w-[3px] h-[20px] bg-neon-mint rounded-sm shadow-[0_0_10px_rgba(0,210,255,0.8)] group-hover:scale-y-110 group-hover:bg-white transition-all duration-200" />
+              <div className="w-[3px] h-[20px] bg-neon-mint rounded-sm shadow-[0_0_10px_rgba(0,163,255,0.8)] group-hover:scale-y-110 group-hover:bg-white transition-all duration-200" />
             </div>
           </div>
         </div>
@@ -479,7 +479,7 @@ export default function HorizontalScrollSection() {
                 transform: "translate(-50%, -50%)"
               }}
             >
-              <div className="w-[10px] h-[2px] bg-neon-mint rounded-sm shadow-[0_0_8px_rgba(0,210,255,0.8)]" />
+              <div className="w-[10px] h-[2px] bg-neon-mint rounded-sm shadow-[0_0_8px_rgba(0,163,255,0.8)]" />
             </div>
           </div>
         </div>
