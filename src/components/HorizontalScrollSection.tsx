@@ -383,9 +383,9 @@ export default function HorizontalScrollSection() {
                 style={{ left: `${maxIndex > 0 ? (index / maxIndex) * 100 : 0}%` }}
               >
                 <span
-                  className={`transition-all duration-300 group-hover:text-neon-mint group-hover:scale-110 ${isActive
-                    ? "text-neon-mint font-bold scale-110 text-glow-mint"
-                    : "text-gray-500 hover:text-white"
+                  className={`transition-all duration-300 group-hover:text-white group-hover:scale-110 ${isActive
+                    ? "text-white font-bold scale-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                    : "text-gray-300 hover:text-white"
                     }`}
                 >
                   {yearLabel}
@@ -416,7 +416,7 @@ export default function HorizontalScrollSection() {
               }}
             >
               {/* Visible pointer notch */}
-              <div className="w-[3px] h-[20px] bg-neon-mint rounded-sm shadow-[0_0_10px_rgba(0,163,255,0.8)] group-hover:scale-y-110 group-hover:bg-white transition-all duration-200" />
+              <div className="w-[3px] h-[20px] bg-white rounded-sm shadow-[0_0_10px_rgba(255,255,255,0.8)] group-hover:scale-y-110 transition-all duration-200" />
             </div>
           </div>
         </div>
@@ -439,8 +439,8 @@ export default function HorizontalScrollSection() {
               >
                 <span
                   className={`transition-all duration-300 ${isActive
-                    ? "text-neon-mint font-bold scale-110 text-glow-mint"
-                    : "text-gray-500 hover:text-white"
+                    ? "text-white font-bold scale-110 drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]"
+                    : "text-gray-300 hover:text-white"
                     }`}
                 >
                   {yearLabel}
@@ -468,7 +468,7 @@ export default function HorizontalScrollSection() {
                 transform: "translate(-50%, -50%)"
               }}
             >
-              <div className="w-[10px] h-[2px] bg-neon-mint rounded-sm shadow-[0_0_8px_rgba(0,163,255,0.8)]" />
+              <div className="w-[10px] h-[2px] bg-white rounded-sm shadow-[0_0_8px_rgba(255,255,255,0.8)]" />
             </div>
           </div>
         </div>
