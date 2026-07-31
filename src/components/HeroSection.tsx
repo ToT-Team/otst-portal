@@ -5,7 +5,7 @@ import { ChevronDown, Trophy, Cpu } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative h-screen w-full flex flex-col justify-center items-center overflow-hidden bg-cyber-bg-darker">
+    <section className="relative h-[100dvh] w-full flex flex-col justify-center items-center overflow-hidden bg-cyber-bg-darker">
       {/* Background Cyber Grid */}
       <div className="absolute inset-0 bg-grid-cyber opacity-30 pointer-events-none z-0" />
 
@@ -19,34 +19,58 @@ export default function HeroSection() {
         backgroundSize: "100% 4px"
       }} />
 
-      {/* Tech Corners / Borders */}
-      <div className="absolute top-8 left-8 w-12 h-12 border-t-2 border-l-2 border-neon-mint/40 z-10 hidden sm:block" />
-      <div className="absolute top-8 right-8 w-12 h-12 border-t-2 border-r-2 border-neon-blue/40 z-10 hidden sm:block" />
-      <div className="absolute bottom-8 left-8 w-12 h-12 border-b-2 border-l-2 border-neon-blue/40 z-10 hidden sm:block" />
-      <div className="absolute bottom-8 right-8 w-12 h-12 border-b-2 border-r-2 border-neon-mint/40 z-10 hidden sm:block" />
+      {/* Bottom Right Vertical Text */}
+      <div className="absolute right-4 sm:right-12 font-mono tracking-[0.3em] text-gray-400 text-[10px] sm:text-[11px] uppercase z-20 origin-bottom-right -rotate-90 whitespace-nowrap opacity-80">
+        osu! Taiwanese Standard Tournament
+      </div>
 
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-4xl">
-        {/* Large Logo */}
-        <h1 className="font-oxanium font-extrabold text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.15em] uppercase select-none text-neon-mint mb-6">
-          OTST
-        </h1>
+        {/* Large Logo Container (Stacked Outlines) */}
+        <div className="group relative mb-6 flex flex-col items-center justify-center z-20 cursor-default">
 
-        {/* Tagline / Subtitle */}
-        <p className="text-gray-300 font-mono tracking-widest text-xs md:text-sm max-w-md md:max-w-xl mx-auto uppercase mb-10 leading-relaxed">
-          osu! Taiwanese Standard Tournament
-          <span className="block mt-2 text-neon-mint font-bold tracking-[0.3em] text-[10px] md:text-xs">
-            Where Legends Collide
-          </span>
-        </p>
-      </div>
+          {/* Top Outlines */}
+          <div
+            className="absolute -translate-y-[225%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-20 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+            style={{ WebkitMaskImage: "linear-gradient(to top, black 10%, transparent 90%)", maskImage: "linear-gradient(to top, black 10%, transparent 90%)" }}
+          >
+            OTST
+          </div>
+          <div
+            className="absolute -translate-y-[150%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-30 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+          >
+            OTST
+          </div>
+          <div
+            className="absolute -translate-y-[75%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-50 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+          >
+            OTST
+          </div>
 
-      {/* Scroll Down Indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 opacity-70 hover:opacity-100 transition-opacity duration-300 cursor-pointer">
-        <span className="font-mono text-[9px] tracking-[0.3em] text-gray-400 uppercase">
-          Scroll Down
-        </span>
-        <ChevronDown className="w-4 h-4 text-neon-mint animate-bounce" />
+          {/* Main Solid Text */}
+          <h1 className="relative font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-[#fefce8] group-hover:text-[#fef08a] transition-all duration-500 z-10 drop-shadow-[0_0_15px_rgba(254,240,138,0.1)] group-hover:drop-shadow-[0_0_25px_rgba(254,240,138,0.5)]">
+            OTST
+          </h1>
+
+          {/* Bottom Outlines */}
+          <div
+            className="absolute translate-y-[75%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-50 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+          >
+            OTST
+          </div>
+          <div
+            className="absolute translate-y-[150%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-30 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+          >
+            OTST
+          </div>
+          <div
+            className="absolute translate-y-[225%] font-sans font-black italic text-[5.5rem] sm:text-[9rem] md:text-[11.5rem] leading-none tracking-[0.05em] uppercase select-none text-transparent opacity-20 z-0 pointer-events-none transition-all duration-500 [-webkit-text-stroke:2px_#fefce8] group-hover:[-webkit-text-stroke:2px_#fef08a]"
+            style={{ WebkitMaskImage: "linear-gradient(to bottom, black 10%, transparent 90%)", maskImage: "linear-gradient(to bottom, black 10%, transparent 90%)" }}
+          >
+            OTST
+          </div>
+
+        </div>
       </div>
     </section>
   );

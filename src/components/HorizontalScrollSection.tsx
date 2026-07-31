@@ -31,7 +31,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "07",
-    title: "otst 7",
+    title: "OTST 7",
     date: "2022.07.15 - 2022.08.25",
     winner: "DazzLE_Wind",
     description: "Introduction of physical hybrid LAN setups for regional semi-final stages, increasing local engagement and community gatherings.",
@@ -43,7 +43,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "06",
-    title: "otst 6",
+    title: "OTST 6",
     date: "2021.07.16 - 2021.08.30",
     winner: "_Shield",
     description: "Rebuilding the core structure. Introducing regional groups and advanced statistics dashboard for player performance tracking.",
@@ -55,7 +55,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "05",
-    title: "otst 5",
+    title: "OTST 5",
     date: "2020.07.24 - 2020.09.06",
     winner: "_Shield",
     description: "Adapted to global remote conditions with fully optimized streaming production, breaking record player signups and online viewership.",
@@ -67,7 +67,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "04",
-    title: "otst 4",
+    title: "OTST 4",
     date: "2019.07.05 - 2019.08.11",
     winner: "Flask",
     description: "Broadcast capabilities upgraded. An invite-only system bringing together the top 16 local talents for a high-speed showcase event.",
@@ -79,7 +79,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "03",
-    title: "otst 3",
+    title: "OTST 3",
     date: "2018.06.29 - 2018.08.12",
     winner: "Rizer",
     description: "First tournament introducing custom pool designs, allowing players to show mechanical mastery across complex map variations.",
@@ -91,7 +91,7 @@ const PAST_EVENTS: EventData[] = [
   },
   {
     id: "02",
-    title: "otst 2",
+    title: "OTST 2",
     date: "2017.06.30 - 2017.07.30",
     winner: "Flask",
     description: "Expanding the player bracket and adopting double-elimination rules. This season witnessed the legendary finals that cemented regional rivalry.",
@@ -323,7 +323,7 @@ export default function HorizontalScrollSection() {
                         </span>
                       </div>
 
-                      <h3 className="text-3xl md:text-5xl font-extrabold tracking-wider text-white uppercase font-mono mb-4 leading-tight">
+                      <h3 className="text-3xl md:text-5xl font-extrabold tracking-wider text-white  font-mono mb-4 leading-tight">
                         {event.title}
                       </h3>
 
@@ -340,8 +340,8 @@ export default function HorizontalScrollSection() {
                             <Trophy className="w-6 h-6 text-neon-blue" />
                           </div>
                           <div>
-                            <div className="text-[10px] font-mono text-gray-300 uppercase tracking-widest mb-1">冠軍</div>
-                            <div className="text-base font-mono font-bold text-white text-glow-blue uppercase">{event.winner}</div>
+                            <div className="text-[10px] font-mono text-gray-300  tracking-widest mb-1">冠軍</div>
+                            <div className="text-base font-mono font-bold text-white text-glow-blue ">{event.winner}</div>
                           </div>
                         </div>
 
@@ -351,7 +351,7 @@ export default function HorizontalScrollSection() {
                             <Users className="w-6 h-6 text-neon-mint" />
                           </div>
                           <div>
-                            <div className="text-[10px] font-mono text-gray-300 uppercase tracking-widest mb-1">參賽玩家</div>
+                            <div className="text-[10px] font-mono text-gray-300  tracking-widest mb-1">參賽玩家</div>
                             <div className="text-base font-mono font-bold text-white">{event.participantCount}</div>
                           </div>
                         </div>
