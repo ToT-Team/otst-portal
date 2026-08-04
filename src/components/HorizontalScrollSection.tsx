@@ -10,7 +10,6 @@ interface EventData {
   winner: string;
   description: string;
   color: string;
-  glowColor: string;
   imagePath: string;
   participantCount: string;
   backgroundImagePath: string;
@@ -24,10 +23,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "GAO HAO",
     description: "The transition to a stadium LAN finals in Taipei. Bringing together elite local players to perform on the main stage before a live audience.",
     color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-blue/10",
-    imagePath: "https://picsum.photos/seed/otst2023/800/600",
+    imagePath: "/past/otstlive_title.png",
     participantCount: "76 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2023/1920/1080"
+    backgroundImagePath: "/past/otstlive_bg.png"
   },
   {
     id: "07",
@@ -36,10 +34,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "DazzLE_Wind",
     description: "Introduction of physical hybrid LAN setups for regional semi-final stages, increasing local engagement and community gatherings.",
     color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-mint/10",
-    imagePath: "https://picsum.photos/seed/otst2022/800/600",
+    imagePath: "/past/otst7_title.png",
     participantCount: "76 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2022/1920/1080"
+    backgroundImagePath: "/past/otst7_bg.png"
   },
   {
     id: "06",
@@ -48,10 +45,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "_Shield",
     description: "Rebuilding the core structure. Introducing regional groups and advanced statistics dashboard for player performance tracking.",
     color: "from-neon-gold/15 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-gold/10",
-    imagePath: "https://picsum.photos/seed/otst2021/800/600",
+    imagePath: "/past/otst6_title.png",
     participantCount: "80 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2021/1920/1080"
+    backgroundImagePath: "/past/otst6_bg.png"
   },
   {
     id: "05",
@@ -60,10 +56,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "_Shield",
     description: "Adapted to global remote conditions with fully optimized streaming production, breaking record player signups and online viewership.",
     color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-blue/10",
-    imagePath: "https://picsum.photos/seed/otst2020/800/600",
+    imagePath: "/past/otst5_title.png",
     participantCount: "51 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2020/1920/1080"
+    backgroundImagePath: "/past/otst5_bg.png"
   },
   {
     id: "04",
@@ -72,10 +67,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "Flask",
     description: "Broadcast capabilities upgraded. An invite-only system bringing together the top 16 local talents for a high-speed showcase event.",
     color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-mint/10",
-    imagePath: "https://picsum.photos/seed/otst2019/800/600",
+    imagePath: "/past/otst4_title.png",
     participantCount: "77 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2019/1920/1080"
+    backgroundImagePath: "/past/otst4_bg.png"
   },
   {
     id: "03",
@@ -84,10 +78,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "Rizer",
     description: "First tournament introducing custom pool designs, allowing players to show mechanical mastery across complex map variations.",
     color: "from-neon-gold/15 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-gold/10",
-    imagePath: "https://picsum.photos/seed/otst2018/800/600",
+    imagePath: "/past/otst3_title.png",
     participantCount: "74 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2018/1920/1080"
+    backgroundImagePath: "/past/otst3_bg.png"
   },
   {
     id: "02",
@@ -96,10 +89,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "Flask",
     description: "Expanding the player bracket and adopting double-elimination rules. This season witnessed the legendary finals that cemented regional rivalry.",
     color: "from-neon-blue/15 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-blue/10",
-    imagePath: "https://picsum.photos/seed/otst2017/800/600",
+    imagePath: "/past/otst2_title.png",
     participantCount: "51 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2017/1920/1080"
+    backgroundImagePath: "/past/otst2_bg.png"
   },
   {
     id: "01",
@@ -108,10 +100,9 @@ const PAST_EVENTS: EventData[] = [
     winner: "Shounen X",
     description: "The very first Taiwanese Standard Tournament. A grassroots local championship that set the foundation for osu! competitive community leagues in Taiwan.",
     color: "from-neon-mint/10 via-cyber-bg-light/5 to-transparent",
-    glowColor: "shadow-neon-mint/10",
-    imagePath: "https://picsum.photos/seed/otst2016/800/600",
+    imagePath: "/past/otst_title.png",
     participantCount: "32 人",
-    backgroundImagePath: "https://picsum.photos/seed/bg2016/1920/1080"
+    backgroundImagePath: "/past/otst_bg.png"
   }
 ];
 
@@ -261,7 +252,7 @@ export default function HorizontalScrollSection() {
     : `-${activeIndex * 100}%`;
 
   return (
-    <div className="relative h-screen w-full bg-cyber-bg-dark flex flex-col justify-center overflow-hidden">
+    <div className="relative h-screen w-full  flex flex-col justify-center overflow-hidden">
       {/* Animated Cyber Background Grid */}
       <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none z-10" />
 
@@ -290,17 +281,14 @@ export default function HorizontalScrollSection() {
               >
                 {/* Full Section Background Image for this event */}
                 <div
-                  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-30 mix-blend-overlay"
+                  className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat opacity-50 mix-blend-overlay"
                   style={{ backgroundImage: `url(${event.backgroundImagePath})` }}
                 />
 
                 {/* Event Card Container */}
                 <div className="relative z-10 w-full px-4 md:px-20 flex justify-center items-center">
-                  {/* Background Gradient aura */}
-                  <div className={`absolute inset-0 bg-gradient-to-r ${event.color} z-0 opacity-80 pointer-events-none`} />
-
                   {/* Event Card */}
-                  <div className={`w-full max-w-5xl bg-cyber-bg-darker/40 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-12 z-10 flex flex-col md:flex-row gap-8 items-stretch shadow-2xl ${event.glowColor}`}>
+                  <div className={`w-full max-w-5xl bg-cyber-bg-darker/50 backdrop-blur-lg border border-white/10 rounded-2xl p-6 md:p-12 z-10 flex flex-col md:flex-row gap-8 items-stretch`}>
 
                     {/* Left Column: Image */}
                     <div className="w-full md:w-2/5 flex flex-col items-center justify-center p-4 border-b md:border-b-0 md:border-r border-white/10">

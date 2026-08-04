@@ -1,7 +1,5 @@
 "use client";
 
-import { Cpu } from "lucide-react";
-
 export default function Footer() {
   return (
     <footer className="relative bg-cyber-bg-darker border-t border-white/5 py-12 px-6 md:px-12 overflow-hidden">
@@ -17,11 +15,11 @@ export default function Footer() {
               OTST
             </span>
             <span className="text-[9px] font-mono text-neon-mint px-1.5 py-0.5 rounded border border-neon-mint/30 bg-neon-mint/5">
-              V2.6
+              V4.1
             </span>
           </div>
           <p className="text-gray-500 font-mono text-xs max-w-sm">
-            Offline To Online Synchronized Tournaments. Empowering next-generation competitive leagues and player tracking systems.
+            © {new Date().getFullYear()} OTST. All rights reserved.
           </p>
         </div>
 
@@ -68,18 +66,6 @@ export default function Footer() {
             </svg>
           </a>
         </div>
-
-        {/* Right Side: Status and Copyright */}
-        <div className="flex flex-col items-center md:items-end text-center md:text-right font-mono text-xs text-gray-500">
-          <div className="flex items-center gap-2 mb-2 bg-cyber-bg-dark border border-white/5 px-3 py-1 rounded-full">
-            <Cpu className="w-3.5 h-3.5 text-green-400 animate-pulse" />
-            <span className="text-[10px] tracking-widest text-green-400">SYS: OPERATIONAL</span>
-          </div>
-          <div>
-            © {new Date().getFullYear()} OTST. All rights reserved.
-          </div>
-        </div>
-
       </div>
     </footer>
   );
