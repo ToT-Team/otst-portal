@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Cpu } from "lucide-react";
 
 export default function Footer() {
@@ -10,7 +9,7 @@ export default function Footer() {
       <div className="absolute inset-0 bg-grid-cyber opacity-10 pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative z-10 flex flex-col md:flex-row justify-between items-center gap-8">
-        
+
         {/* Left Side: Brand and Description */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="flex items-center gap-2 mb-3">
@@ -26,7 +25,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Center: Social Links */}
         {/* Center: Social Links */}
         <div className="flex items-center gap-4">
           {/* Github */}
