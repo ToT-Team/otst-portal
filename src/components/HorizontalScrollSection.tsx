@@ -358,7 +358,7 @@ export default function HorizontalScrollSection() {
       {/* Desktop Progress Timeline Indicator (bottom of section) */}
       <div className="hidden md:flex absolute bottom-10 left-12 right-12 z-20 flex-col">
         {/* Timeline Year Labels */}
-        <div className="relative w-full h-6 font-mono text-[10px] sm:text-xs">
+        <div className="relative w-full h-8 font-mono text-[10px] sm:text-xs md:text-base lg:text-lg">
           {PAST_EVENTS.map((event, index) => {
             const isActive = activeIndex === index;
             const yearLabel = event.date.substring(0, 4);
@@ -411,7 +411,7 @@ export default function HorizontalScrollSection() {
       </div>
 
       {/* Mobile Vertical Timeline (right side of section) */}
-      <div className="flex md:hidden absolute right-3 top-1/2 -translate-y-1/2 z-20 flex-row items-center h-[280px]">
+      <div className="flex md:hidden absolute right-1 top-1/2 -translate-y-1/2 z-20 flex-row items-center h-[280px]">
         {/* Timeline Year Labels */}
         <div className="relative h-full w-10 font-mono text-[9px]">
           {PAST_EVENTS.map((event, index) => {
