@@ -17,6 +17,8 @@ interface Tournament {
   regEnd: string;
   tourneyStart: string;
   tourneyEnd: string;
+  forumPost?: string;
+  url?: string;
 }
 
 // Function to parse the markdown file
@@ -127,8 +129,11 @@ export default function TournamentsPage() {
             const rankText = formatRank(tournament.rankLimitMin, tournament.rankLimitMax);
 
             return (
-              <div 
+              <a 
                 key={tournament.id}
+                href={tournament.url || '#'}
+                target="_blank"
+                rel="noopener noreferrer"
                 className={`group flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-4 items-start lg:items-center p-5 md:p-6 bg-cyber-bg-dark/40 backdrop-blur-md border border-white/10 rounded-lg transition-all duration-300 cursor-pointer hover:bg-cyber-bg-dark/60 ${modeInfo.border} ${modeInfo.shadow}`}
               >
                 
@@ -179,7 +184,7 @@ export default function TournamentsPage() {
                   <ExternalLink className="w-4 h-4 text-gray-600 hidden lg:block group-hover:text-white transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0" />
                 </div>
 
-              </div>
+              </a>
             );
           })}
 
