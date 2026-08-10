@@ -1,20 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oxanium:wght@400;700;800&display=swap');
 @import "tailwindcss";
 
 @theme {
   /* Vibrant Deep Blue Backgrounds */
-  --color-cyber-bg-darker: #172554; /* Blue 950 */
-  --color-cyber-bg-dark: #1e3a8a; /* Blue 900 */
-  --color-cyber-bg-light: #1d4ed8; /* Blue 700 */
-  
+  --color-cyber-bg-darker: #172554;
+  /* Blue 950 */
+  --color-cyber-bg-dark: #1e3a8a;
+  /* Blue 900 */
+  --color-cyber-bg-light: #1d4ed8;
+  /* Blue 700 */
+
   /* Sports Accents */
-  --color-neon-mint: #00a3ff; /* Bright Blue (Primary) */
-  --color-neon-blue: #ffff00; /* Volt Yellow (Secondary) */
-  --color-neon-gold: #00e5ff; /* Cyan */
-  --color-neon-coral: #ff00ff; /* Magenta */
-  
-  --font-oxanium: 'Oxanium', sans-serif;
-  
+  --color-neon-mint: #00a3ff;
+  /* Bright Blue (Primary) */
+  --color-neon-blue: #ffff00;
+  /* Volt Yellow (Secondary) */
+  --color-neon-gold: #00e5ff;
+  /* Cyan */
+  --color-neon-coral: #ff00ff;
+  /* Magenta */
+
+  --font-sans: var(--font-noto-sans-tc), system-ui, sans-serif;
+
   --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   --animate-scanline: scanline 8s linear infinite;
   --animate-cyber-glow: cyber-glow 3s ease-in-out infinite alternate;
@@ -24,6 +30,7 @@
   0% {
     background-position: 0 0;
   }
+
   100% {
     background-position: 0 100%;
   }
@@ -33,27 +40,29 @@
   0% {
     text-shadow: 0 0 10px rgba(0, 163, 255, 0.5), 0 0 20px rgba(0, 163, 255, 0.3);
   }
+
   100% {
     text-shadow: 0 0 15px rgba(255, 255, 0, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
   }
 }
 
 :root {
-  --background: #0f172a; /* Deep Slate Navy Base */
+  --background: #0f172a;
+  /* Deep Slate Navy Base */
   --foreground: #f8fafc;
 }
 
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: var(--font-noto-sans-tc), 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   overflow-x: hidden;
 }
 
 /* Custom Utilities for Sports Vibe */
 .bg-grid-cyber {
   background-size: 50px 50px;
-  background-image: 
+  background-image:
     linear-gradient(to right, rgba(0, 163, 255, 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 163, 255, 0.05) 1px, transparent 1px);
 }
@@ -84,8 +93,16 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
+.noto-sans-tc-hero {
+  font-family: var(--font-noto-sans-tc), sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}

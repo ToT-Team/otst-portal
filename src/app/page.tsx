@@ -10,9 +10,6 @@ export default function Home() {
         {/* Section 1: Hero Centered Logo */}
         <HeroSection />
 
-        {/* Spacer between Hero and Scroll Section */}
-        <div className="h-24 md:h-48 w-full" />
-
         {/* Section 2: Vertical to Horizontal Past Tournaments */}
         <HorizontalScrollSection />
 

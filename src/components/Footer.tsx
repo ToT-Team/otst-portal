@@ -18,8 +18,9 @@ export default function Footer() {
               V5
             </span>
           </div>
-          <p className="text-gray-500 font-mono text-xs max-w-sm">
-            © {new Date().getFullYear()} OTST. All rights reserved.
+          <p className="text-gray-500 font-mono text-xs max-w-sm" suppressHydrationWarning>
+            {new Date().getFullYear()} by Taiwanese osu! Tournaments Team.<br />
+            We still can't get a 1k pp.
           </p>
         </div>
 

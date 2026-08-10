@@ -10,7 +10,7 @@ export default function SimpleBorderSection() {
       <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none" />
 
       {/* Outlined Tech Rectangle (Clickable Link) */}
-      <Link href="/tournaments" className="relative max-w-xl w-full p-10 md:p-14 border border-neon-blue/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,163,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-neon-blue/80 hover:shadow-[0_0_50px_rgba(255,255,0,0.15)] hover:scale-105 transition-all duration-500 cursor-pointer">
+      <Link href="/tournaments" className="relative max-w-xl w-full p-10 md:p-14 border border-neon-blue/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,163,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-neon-blue/80 hover:shadow-[0_0_50px_rgba(255,255,0,0.15)] transition-all duration-500 cursor-pointer">
         {/* Subtle glowing tech corners on the rectangle */}
         <div className="absolute -top-[1px] -left-[1px] w-4 h-4 border-t border-l border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
         <div className="absolute -top-[1px] -right-[1px] w-4 h-4 border-t border-r border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
