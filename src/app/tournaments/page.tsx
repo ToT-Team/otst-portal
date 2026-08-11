@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { ArrowLeft, MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search, Info } from "lucide-react";
+import { ArrowLeft, MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search, Info, Award } from "lucide-react";
 import Footer from "../../components/Footer";
 import { ModeStandardIcon } from "../../components/icons/ModeStandardIcon";
 import { ModeManiaIcon } from "../../components/icons/ModeManiaIcon";
@@ -67,6 +67,7 @@ export default function TournamentsPage() {
   const [selectedModes, setSelectedModes] = useState<number[]>([]);
   const [selectedTeamSizes, setSelectedTeamSizes] = useState<number[]>([]);
   const [rankFilter, setRankFilter] = useState("");
+  const [badgeFilter, setBadgeFilter] = useState<'all' | 'yes' | 'no'>('all');
 
   // Force a re-render on mount to ensure dates match the client time 
   const [, setNow] = useState(new Date());
@@ -128,9 +129,17 @@ export default function TournamentsPage() {
         }
       }
 
+      // 5. Badge Filter
+      if (badgeFilter === 'yes' && t.badge !== 'true') {
+        return false;
+      }
+      if (badgeFilter === 'no' && t.badge === 'true') {
+        return false;
+      }
+
       return true;
     });
-  }, [initialTournaments, searchQuery, selectedModes, selectedTeamSizes, rankFilter]);
+  }, [initialTournaments, searchQuery, selectedModes, selectedTeamSizes, rankFilter, badgeFilter]);
 
   const availableModes = [
     { id: 0, name: "Standard" },
@@ -242,6 +251,40 @@ export default function TournamentsPage() {
             </div>
           </div>
 
+          {/* Badge Filter */}
+          <div className="flex flex-col gap-2 w-full sm:w-auto">
+            <span className="text-xs font-mono text-gray-500 tracking-widest uppercase">Badge</span>
+            <div className="flex flex-wrap gap-2">
+              <button
+                onClick={() => setBadgeFilter('all')}
+                className={`px-3 py-1 rounded border text-xs font-mono transition-all duration-300 ${badgeFilter === 'all'
+                  ? "bg-purple-500/20 border-purple-500/50 text-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+                  : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                  }`}
+              >
+                All
+              </button>
+              <button
+                onClick={() => setBadgeFilter('yes')}
+                className={`px-3 py-1 rounded border text-xs font-mono transition-all duration-300 ${badgeFilter === 'yes'
+                  ? "bg-purple-500/20 border-purple-500/50 text-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+                  : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                  }`}
+              >
+                Yes
+              </button>
+              <button
+                onClick={() => setBadgeFilter('no')}
+                className={`px-3 py-1 rounded border text-xs font-mono transition-all duration-300 ${badgeFilter === 'no'
+                  ? "bg-purple-500/20 border-purple-500/50 text-purple-400 shadow-[0_0_10px_rgba(168,85,247,0.2)]"
+                  : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                  }`}
+              >
+                No
+              </button>
+            </div>
+          </div>
+
         </div>
 
         {/* Tournaments List (Row Based) */}
@@ -250,9 +293,10 @@ export default function TournamentsPage() {
           {/* Table Header (Hidden on small screens) */}
           <div className="hidden lg:grid grid-cols-12 gap-4 px-6 py-3 border-b border-white/20 font-mono text-[10px] text-gray-500 uppercase tracking-widest">
             <div className="col-span-3">Tournament Name</div>
-            <div className="col-span-2">Mode</div>
+            <div className="col-span-1">Mode</div>
             <div className="col-span-1">Format</div>
             <div className="col-span-2">Rank Limit</div>
+            <div className="col-span-1">Badge</div>
             <div className="col-span-3 text-center">Schedule</div>
             <div className="col-span-1 text-center">Status</div>
           </div>
@@ -300,13 +344,16 @@ export default function TournamentsPage() {
                   </div>
 
                   {/* Mode */}
-                  <div className="col-span-2 flex items-center gap-2 text-gray-300 font-mono text-sm">
+                  <div className="col-span-1 flex items-center gap-2 text-gray-300 font-mono text-sm relative group/mode">
                     {modeInfo.Icon ? (
                       <modeInfo.Icon className={`w-5 h-5 opacity-80 group-hover:opacity-100 transition-opacity ${modeInfo.color}`} />
                     ) : (
                       <MonitorPlay className={`w-4 h-4 ${modeInfo.color}`} />
                     )}
-                    <span className="whitespace-nowrap">{modeInfo.name}</span>
+                    <span className="whitespace-nowrap lg:absolute lg:left-1/2 lg:-translate-x-1/2 lg:bottom-full lg:mb-2 lg:bg-cyber-bg-dark lg:border lg:border-white/20 lg:text-white lg:text-[11px] lg:rounded lg:px-3 lg:py-1.5 lg:opacity-0 lg:group-hover/mode:opacity-100 lg:pointer-events-none lg:transition-opacity lg:z-50 lg:shadow-xl">
+                      {modeInfo.name}
+                      <span className="hidden lg:block absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[5px] border-r-[5px] border-t-[6px] border-transparent border-t-white/20" />
+                    </span>
                   </div>
 
                   {/* Format (Solo/Team) */}
@@ -337,6 +384,21 @@ export default function TournamentsPage() {
                         </>
                       )}
                     </span>
+                  </div>
+
+                  {/* Badge */}
+                  <div className="col-span-1 flex items-center gap-2 text-gray-300 font-mono text-sm">
+                    {tournament.badge === 'true' ? (
+                      <span className="flex items-center gap-1 text-neon-mint font-bold">
+                        <Award className="w-4 h-4" />
+                        有
+                      </span>
+                    ) : (
+                      <span className="flex items-center gap-1 text-gray-600">
+                        <Award className="w-4 h-4 opacity-30" />
+                        無
+                      </span>
+                    )}
                   </div>
 
                   {/* Schedule (Registration & Tourney Time) */}

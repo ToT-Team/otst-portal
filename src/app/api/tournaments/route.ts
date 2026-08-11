@@ -19,6 +19,8 @@ export interface Tournament {
   forumId?: string;
   url?: string;
   regLimit?: string;
+  badge?: string;
+  badgeUrl?: string;
 }
 
 export async function GET() {

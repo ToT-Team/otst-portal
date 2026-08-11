@@ -13,6 +13,8 @@
 - **tourneyEnd**: 2025/08/24
 - **url**: https://otst.tw/live/
 - **forumId**: 2095985
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 7
 - **shortName**: OTST 7
@@ -27,6 +29,8 @@
 - **tourneyEnd**: 2022/08/25
 - **url**: https://otst.tw/7/
 - **forumId**: 1592255
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 6
 - **shortName**: OTST 6
@@ -41,6 +45,8 @@
 - **tourneyEnd**: 2021/08/30
 - **url**: https://otst.tw/6/
 - **forumId**: 1341759
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 5
 - **shortName**: OTST 5
@@ -55,6 +61,8 @@
 - **tourneyEnd**: 2020/09/06
 - **url**: https://otst.tw/5/
 - **forumId**: 1088789
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 4
 - **shortName**: OTST 4
@@ -69,6 +77,8 @@
 - **tourneyEnd**: 2019/08/11
 - **url**: https://otst.tw/4/
 - **forumId**: 908184
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 3
 - **shortName**: OTST 3
@@ -83,6 +93,8 @@
 - **tourneyEnd**: 2018/08/12
 - **url**: https://otst.tw/3/
 - **forumId**: 742667
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament 2
 - **shortName**: OTST 2
@@ -97,6 +109,8 @@
 - **tourneyEnd**: 2017/07/30
 - **url**: https://osu.ppy.sh/community/forums/topics/654321
 - **forumId**: 591935
+- **badge**: true
+- **badgeUrl**: 
 
 ## osu! Taiwanese Standard Tournament
 - **shortName**: OTST
@@ -111,3 +125,5 @@
 - **tourneyEnd**: 2016/02/28
 - **url**: https://osu.ppy.sh/community/forums/topics/543210
 - **forumId**: 417190
+- **badge**: false
+- **badgeUrl**: 
