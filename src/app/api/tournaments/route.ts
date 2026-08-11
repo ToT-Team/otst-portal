@@ -16,7 +16,9 @@ export interface Tournament {
   tourneyStart: string;
   tourneyEnd: string;
   forumPost?: string;
+  forumId?: string;
   url?: string;
+  regLimit?: string;
 }
 
 export async function GET() {

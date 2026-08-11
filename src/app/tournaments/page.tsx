@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search } from "lucide-react";
+import { ArrowLeft, MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search, Info } from "lucide-react";
 import Footer from "../../components/Footer";
 import { ModeStandardIcon } from "../../components/icons/ModeStandardIcon";
 import { ModeManiaIcon } from "../../components/icons/ModeManiaIcon";
@@ -25,9 +25,9 @@ const getModeInfo = (modeStr: string) => {
 
 // Rank Map function
 const formatRank = (min: string, max: string) => {
-  if (min === "-" && max === "-") return "無限制 (No Limit)";
-  if (min === "-") return `Max #${max}`;
-  if (max === "-") return `Min #${min}`;
+  if (min === "-" && max === "-") return "無限制";
+  if (min === "-") return `~ #${max}`;
+  if (max === "-") return `#${min} ~`;
   return `#${min} - #${max}`;
 };
 
@@ -280,7 +280,7 @@ export default function TournamentsPage() {
               return (
                 <a
                   key={tournament.id}
-                  href={tournament.url || '#'}
+                  href={tournament.forumId ? `https://osu.ppy.sh/community/forums/topics/${tournament.forumId}` : (tournament.url || '#')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`group flex flex-col lg:grid lg:grid-cols-12 gap-4 lg:gap-4 items-start lg:items-center p-5 md:p-6 bg-cyber-bg-dark/40 backdrop-blur-md border border-white/10 rounded-lg transition-all duration-300 cursor-pointer hover:bg-cyber-bg-dark/60 ${modeInfo.border} ${modeInfo.shadow}`}
@@ -291,9 +291,9 @@ export default function TournamentsPage() {
                     <div className="flex flex-col">
                       <h2 className="font-bold text-lg md:text-xl text-white group-hover:text-white transition-colors flex items-center gap-3">
                         <span className={`w-2 h-2 rounded-full bg-white/20 group-hover:${modeInfo.bg} transition-colors`} />
-                        {tournament.name}
+                        {tournament.shortName}
                       </h2>
-                      <span className="text-gray-500 font-mono text-[10px] md:text-xs ml-5 tracking-widest uppercase">{tournament.shortName}</span>
+                      <span className="text-gray-500 font-mono text-[10px] md:text-xs ml-5 tracking-widest">{tournament.name}</span>
                     </div>
                     {/* External Link Icon for Mobile */}
                     <ExternalLink className="w-4 h-4 text-gray-500 lg:hidden group-hover:text-white transition-colors flex-shrink-0" />
@@ -318,7 +318,25 @@ export default function TournamentsPage() {
                   {/* Rank Limit */}
                   <div className="col-span-2 flex items-center gap-2 text-gray-300 font-mono text-sm">
                     <Target className={`w-4 h-4 ${modeInfo.color}`} />
-                    <span className="whitespace-nowrap">{rankText}</span>
+                    <span className="flex flex-wrap items-center gap-1.5 lg:whitespace-nowrap">
+                      <span className="whitespace-nowrap">{rankText}</span>
+                      {tournament.regLimit && (
+                        <>
+                          {/* Desktop (lg+): Info Icon with Tooltip */}
+                          <div className="relative group/tooltip hidden lg:flex items-center">
+                            <Info className="w-3.5 h-3.5 text-gray-400 hover:text-white transition-colors cursor-help" />
+                            <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-max max-w-[250px] bg-cyber-bg-dark border border-white/20 text-white text-[11px] rounded px-3 py-2 opacity-0 group-hover/tooltip:opacity-100 pointer-events-none transition-opacity z-50 whitespace-normal text-center shadow-[0_0_15px_rgba(0,163,255,0.2)]">
+                              {tournament.regLimit}
+                              <div className="absolute left-1/2 -translate-x-1/2 top-full w-0 h-0 border-l-[5px] border-r-[5px] border-t-[6px] border-transparent border-t-white/20" />
+                            </div>
+                          </div>
+                          {/* Mobile (<lg): Inline text in parentheses */}
+                          <span className="lg:hidden text-[10px] sm:text-xs text-white-400 whitespace-normal">
+                            ({tournament.regLimit})
+                          </span>
+                        </>
+                      )}
+                    </span>
                   </div>
 
                   {/* Schedule (Registration & Tourney Time) */}
