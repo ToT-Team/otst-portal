@@ -10,15 +10,9 @@ export default function SimpleBorderSection() {
       <div className="absolute inset-0 bg-grid-cyber opacity-20 pointer-events-none" />
 
       {/* Outlined Tech Rectangle (Clickable Link) */}
-      <Link href="/tournaments" className="relative max-w-xl w-full p-10 md:p-14 border border-neon-blue/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,163,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-neon-blue/80 hover:shadow-[0_0_50px_rgba(255,255,0,0.15)] transition-all duration-500 cursor-pointer">
-        {/* Subtle glowing tech corners on the rectangle */}
-        <div className="absolute -top-[1px] -left-[1px] w-4 h-4 border-t border-l border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
-        <div className="absolute -top-[1px] -right-[1px] w-4 h-4 border-t border-r border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
-        <div className="absolute -bottom-[1px] -left-[1px] w-4 h-4 border-b border-l border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
-        <div className="absolute -bottom-[1px] -right-[1px] w-4 h-4 border-b border-r border-neon-blue/60 group-hover:border-neon-blue transition-colors duration-300" />
-
+      <Link href="/tournaments" className="relative max-w-xl w-full p-10 md:p-14 border border-gray-200/30 rounded-lg bg-cyber-bg-dark/40 backdrop-blur-md shadow-[0_0_30px_rgba(0,163,255,0.05)] text-center flex flex-col items-center justify-center group hover:border-gray-200/80 hover:shadow-[0_0_50px_rgba(255,255,255,0.15)] transition-all duration-500 cursor-pointer">
         {/* Center Simple Text */}
-        <h3 className="font-sans font-black text-2xl md:text-3xl tracking-[0.15em] text-white group-hover:text-neon-blue group-hover:text-glow-blue uppercase mb-3 transition-colors duration-300">
+        <h3 className="font-sans font-black text-2xl tracking-[0.15em] text-gray-500 group-hover:text-white uppercase mb-3 transition-colors duration-300">
           更多台灣賽事
         </h3>
         <p className="font-mono text-[10px] md:text-xs tracking-[0.3em] text-gray-500 uppercase group-hover:text-gray-300 transition-colors duration-300">
