@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useMemo, useEffect } from "react";
-import Link from "next/link";
-import { ArrowLeft, MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search } from "lucide-react";
+import { useState, useMemo, useEffect } from "react";
+import { MonitorPlay, Users, Target, CalendarDays, ExternalLink, Clock, Search } from "lucide-react";
+import Footer from "../../components/Footer";
 import { ModeStandardIcon } from "../../components/icons/ModeStandardIcon";
 import { ModeManiaIcon } from "../../components/icons/ModeManiaIcon";
 import { ModeTaikoIcon } from "../../components/icons/ModeTaikoIcon";
@@ -155,15 +155,6 @@ export default function TournamentsPage() {
       {/* Content Container */}
       <main className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-8 pt-16 pb-32">
 
-        {/* Navigation */}
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-4 py-2 border border-white/10 rounded bg-white/5 hover:bg-white/10 hover:border-neon-blue/50 text-gray-400 hover:text-white transition-all duration-300 font-mono text-sm uppercase tracking-widest mb-12 group"
-        >
-          <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Back to Home
-        </Link>
-
         {/* Page Header */}
         <header className="mb-8">
           <h1 className="font-sans font-black italic text-4xl md:text-6xl tracking-[0.05em] text-white mb-4">
@@ -218,8 +209,8 @@ export default function TournamentsPage() {
                     key={mode.id}
                     onClick={() => toggleMode(mode.id)}
                     className={`px-3 py-1 rounded border text-xs font-mono transition-all duration-300 ${isActive
-                        ? "bg-neon-blue/20 border-neon-blue/50 text-neon-blue shadow-[0_0_10px_rgba(0,163,255,0.2)]"
-                        : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                      ? "bg-neon-blue/20 border-neon-blue/50 text-neon-blue shadow-[0_0_10px_rgba(0,163,255,0.2)]"
+                      : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
                       }`}
                   >
                     {mode.name}
@@ -240,8 +231,8 @@ export default function TournamentsPage() {
                     key={size}
                     onClick={() => toggleTeamSize(size)}
                     className={`px-3 py-1 rounded border text-xs font-mono transition-all duration-300 ${isActive
-                        ? "bg-neon-mint/20 border-neon-mint/50 text-neon-mint shadow-[0_0_10px_rgba(0,255,170,0.2)]"
-                        : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
+                      ? "bg-neon-mint/20 border-neon-mint/50 text-neon-mint shadow-[0_0_10px_rgba(0,255,170,0.2)]"
+                      : "bg-white/5 border-white/10 text-gray-400 hover:bg-white/10 hover:text-white"
                       }`}
                   >
                     {size}v{size}
@@ -359,6 +350,8 @@ export default function TournamentsPage() {
           )}
         </div>
       </main>
+
+      <Footer />
     </div>
   );
 }
